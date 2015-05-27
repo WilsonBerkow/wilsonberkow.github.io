@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Master and Margarita</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                user-select: none;
+                cursor: default;
+                font-family: arial;
+                background: black;
+                width: 576px;
+                
+            }
+            #container {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            canvas {
+                position: absolute;
+            }
+            @font-face {
+                font-family: BlessedDay;
+                src: url(./BLESD___.otf)
+            }
+            @font-face {
+                font-family: PressStart2P;
+                src: url(./PressStart2P.ttf);
+            }
+            #storycontainer {
+                width: 576px;/*336px;*/
+                height: 1024px;/*904px;*/
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 77px;
+                padding-top: 77px;
+            }
+            #story {
+                background-color: #EDB773;
+                color: #7D603D;
+                padding: 15px;
+                border-radius: 15px;
+                font-size: 24px;
+                width: 476px;
+                height: 850px;
+            }
+            #story > ttl {
+                display: block;
+                font-family: arial;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            #story > bdy {
+                display: block;
+                padding: 5px;
+                font-size: 1.2em;
+            }
+            #story > bdy > item {
+                display: block;
+                background-color: tan;
+                margin: 5px;
+                padding: 10px;
+                border-radius: 15px;
+            }
+            #story > bdy > item > ttl {
+                display: block;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            #story > bdy > item > description {
+                display: block;
+            }
+            btn {
+                border-radius: 15px;
+                background-color: #ffc27b;
+                color: #bd905b;
+                box-shadow: 2px 2px 0 0 #bd905b;
+                font-weight: bold;
+                padding: 0.1em;
+            }
+            btn:active {
+                background-color: none;
+                box-shadow: none;
+            }
+            .playBtn {
+                padding: 6px;
+                font-style: 1.5em;
+                font-weight: bold;
+            }
+            playBtnCont {
+                display: block;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <canvas id="game" width="576" height="1024"></canvas>
+            <canvas id="overlay0" width="576" height="1024"></canvas>
+            <div id="storycontainer">
+                <div id="story" style="display: none; position: fixed;">
+                    <!-- This will not fill the page, but will be pulled up over the main menu -->
+                    <ttl>Behind The Minigames&nbsp;&nbsp;&nbsp;<btn id="closeStory">&nbsp;&#10006;&nbsp;</btn></ttl>
+                    <bdy>
+                        <item>
+                            <ttl>Match the Heads</ttl>
+                            <description>
+                                Woland's retinue has fun tearing people's heads
+                                off, so you'll have have to be quick putting 
+                                them back on!
+                            </description>
+                            <playBtnCont><btn class="playBtn" target="headsGame">Help & Play</btn></playBtnCont>
+                        </item>
+                        <hr color="white" />
+                        <item>
+                            <ttl>Shoot Woland</ttl>
+                            <description>
+                                Woland's thinks that machines and apparatus
+                                are trivial, and humans are just as helpless with
+                                them as without them.
+                                <br style="height: 15px;" />
+                                But you have a shotgun.
+                            </description>
+                            <playBtnCont><btn class="playBtn" target="shotgunGame">Help & Play</btn></playBtnCont>
+                        </item>
+                        <hr color="white" />
+                        <item>
+                            <ttl>Defend the Streetcar</ttl>
+                            <description>
+                                Behemoth is known to try to get his way into
+                                streetcars, keep him out while bringing in all
+                                the wonderful Muscovites!
+                            </description>
+                            <playBtnCont><btn class="playBtn" target="streetcarGame">Help & Play</btn></playBtnCont>
+                        </item>
+                    </bdy>
+                </div>
+            </div>
+        </div>
+        <script src="jquery-2.1.4.min.js"></script>
+        <script src="hammer.min.js"></script>
+        <script>
+            (function () {
+                var $story = jQuery('#story');
+                var isOffsetted = false;
+                jQuery('btn').on('touchstart mousedown', function (event) {
+                    var $btn = jQuery(event.target);
+                    var offset = $btn.offset();
+                    $btn.offset({left: offset.left + 2, top: offset.top + 2});
+                    isOffsetted = true;
+                }).on('touchend mouseup', function (event) {
+                    if (isOffsetted) {
+                        var $btn = jQuery(event.target);
+                        var offset = $btn.offset();
+                        $btn.offset({left: offset.left - 2, top: offset.top - 2});
+                        isOffsetted = false;
+                    }
+                });
+                jQuery("btn#closeStory").on('tap click', function () {
+                    $story.css('display', 'none');
+                });
+            }());
+        </script>
+        <script src="bulgakov.js"></script>
+    </body>
+</html>
