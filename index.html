@@ -3,45 +3,217 @@
     <head>
         <title>Wilson Berkow</title>
         <style>
+            @font-face {
+                font-family: Existence;
+                src: url(Existence-Light.otf);
+            }
             html, body {
                 width: 100%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                background-color: rgba(50, 50, 150, 0.2);
-                font-family: corbel;
+                font-family: Existence, corbel, arial;
+                overflow-x: hidden;
+                color: #ccc;
+                background: #050b1c; /* Old browsers */
+                background: -moz-linear-gradient(top,  #050b1c 0%, #14346b 93%, #11446d 95%, #0c1b3d 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#050b1c), color-stop(93%,#14346b), color-stop(95%,#11446d), color-stop(100%,#0c1b3d)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #050b1c 0%,#14346b 93%,#11446d 95%,#0c1b3d 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #050b1c 0%,#14346b 93%,#11446d 95%,#0c1b3d 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #050b1c 0%,#14346b 93%,#11446d 95%,#0c1b3d 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #050b1c 0%,#14346b 93%,#11446d 95%,#0c1b3d 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050b1c', endColorstr='#0c1b3d',GradientType=0 ); /* IE6-9 */
+            }
+            .column a {
+                color: blue;
+                text-decoration: none;
+            }
+            .column a:hover {
+                text-decoration: underline;
+            }
+            .column a:active {
+                color: orange;
             }
             header {
-                font-size: 30px;
-                padding: 10px;
-                height: 40px;
-                font-weight: bold;
-                background-color: rgba(20, 20, 75, 0.5);
-                text-align: center;
-            }
-            #content {
+                font-size: 65px;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-right: 10px;
                 width: 100%;
+                height: 65px;
+                font-variant: small-caps;
                 text-align: center;
             }
-            #tmpmsg {
+            #subtitle {
+                font-size: 20px;
+                text-align: center;
+                font-variant: small-caps;
+            }
+            .column {
                 display: inline-block;
-                width: 50%;
+                vertical-align: top;
+            }
+            .column#skills, .column#about {
+                width: 25%;
+                margin: 0 2.2% 2.2% 2.2%;
+            }
+            .column#projects {
+                width: 40%;
+            }
+            .column > .heading {
+                font-size: 40px;
+                width: 100%;
+                font-variant: small-caps;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            #projects > .item > .name {
+                font-weight: bold;
+                font-size: 1.3em;
+                display: inline-block;
+                border-top: 2px solid dimgray;
+                border-left: 2px solid dimgray;
+                padding-left: 2px;
+            }
+            #projects > .item > .name:after {
+                content: ":";
+            }
+            #projects > .item {
+                margin-bottom: 15px;
+            }
+            .buttonset {
+                width: 100%;
+                display: flex;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .buttonset > a {
+                display: block;
+                flex-grow: 1;
+                flex-shrink: 1;
+                cursor: pointer;
+                background-color: gray;
+                text-align: center;
+                font-size: 18px;
+                padding: 5px;
+                border: 2px solid dimgray;
+                text-decoration: none;
+                color: #ccc;
+            }
+            .buttonset > a:hover {
+                border: 2px solid black;
+                text-decoration: underline;
+                color: #ccc;
+            }
+            .buttonset > a:active {
+                border: 2px solid #800;
+                color: #ccc;
+            }
+            #topright {
+                position: absolute;
+                top: 0;
+                right: 2.2%;
+                padding: 15px;
+            }
+            #topright a {
+                color: lightgray;
+                margin-left: 8px;
+            }
+            #topright a:hover {
+                color: gray;
+            }
+            #topright a:active {
+                color: dimgray;
             }
         </style>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="favicon.png" rel="shortcut icon" />
     </head>
     <body>
-        <header>Homepage of Wilson Berkow</header>
-        <div id="content">
-            <div id="tmpmsg">
-                <p>
-                    At the moment, this has just been created as a quick place to host
-                    <a href="margarita/index.html">a project of mine</a> for school, a
-                    mobile/web game based on M. Bulgakov's <i>The Master and Margarita</i>.
-                </p>
-                <p>
-                    Stay tuned for a fuller site!
-                </p>
+        <header>Wilson Berkow</header>
+        <div id="topright">
+            <a href="http://github.com/WilsonBerkow"><i class="fa fa-github-square fa-3x"></i></a>
+            <a href="mailto:wilsonberkow@gmail.com"><i class="fa fa-envelope-square fa-3x"></i></a>
+        </div>
+        <hr style="width: 200px; " />
+        <div id="subtitle">Freelance Developer</div>
+        <div id="skills" class="column">
+            <div class="heading">Skills</div>
+            <hr style="width: 80%;" />
+            <ul>
+                <li>
+                    Web development:
+                    <ul>
+                        <li>HTML, HTML5</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>Design</li>
+                <li>Haskell</li>
+                <li><a href="http://elm-lang.org">Elm</a></li>
+                <li>Git</li>
+            </ul>
+        </div>
+        <div id="projects" class="column">
+            <div class="heading">Projects & Experience</div>
+            <hr style="width: 80%;" />
+            <div class="item">
+                <div class="name">Firecyclist</div>
+                a mobile game written with web technologies, in which
+                the player falls through the sky, manuevering around
+                fireballs by drawing platforms under a unicyclist's
+                feet.
+                <div class="buttonset">
+                    <a href="firecyclist/">PLAY</a>
+                    <a href="http://github.com/WilsonBerkow/FirecyclistJS">GITHUB</a>
+                </div>
             </div>
+            <div class="item">
+                <div class="name">Margarita</div>
+                a mobile game written with web technologies, based on
+                Mikhail Bulgakov's <i>The Master and Margarita</i>, in
+                which the player is faced with a series of randomly-selected
+                minigames based on the book.
+                <div class="buttonset">
+                    <a href="margarita/">PLAY</a>
+                    <a href="http://github.com/WilsonBerkow/The-Master-and-Margarita">GITHUB</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="name">makeParser.coffee</div>
+                a <a href="https://en.wikipedia.org/wiki/Recursive_descent_parser">recursive
+                descent</a> <a href="https://en.wikipedia.org/wiki/Parsing">parsing</a>
+                library written in CoffeeScript.
+                <div class="buttonset">
+                    <a>TRY</a> <!-- TODO: SET UP TRY PAGE. FIRST, UPDATE GITHUB REPO WITH RECENTER CODE. THE SHIT THERE IS SHIT. -->
+                    <a href="http://github.com/WilsonBerkow/makeParser-coffee">GITHUB</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="name">Cheshire Chess</div>
+                I wrote this project in a pair for a basic CS class. This is
+                not my best work in terms of code-quality or UX, because we
+                were restricted using what had been taught in that introductory
+                class, but it is nevertheless an interesting little application
+                for running a chess board.
+                <div class="buttonset">
+                    <a href="http://lisa.stuy.edu/~wilson.berkow/proj/">PLAY</a>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="column">
+            <div class="heading">About</div>
+            <hr style="width: 80%;" />
+            I am a junior at Stuyvesant High School in New York City, and
+            have been programming for years. I have a passion for programming
+            language design and mathematics, but love plain old software
+            development just as much. Most of the projects that I have done
+            thus far have just been either explorations of my interests or
+            simply projects to pass the time.
         </div>
     </body>
 </html>
