@@ -10,17 +10,10 @@ html, body {
     font-family: Existence, corbel, arial;
     overflow-x: hidden;
     color: #ccc;
-    background: #050b1c; /* Old browsers */
-    background: -moz-linear-gradient(top,  #050b1c 0%, #184882 19%, #175c91 66%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#050b1c), color-stop(19%,#184882), color-stop(66%,#175c91)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #050b1c 0%,#184882 19%,#175c91 66%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #050b1c 0%,#184882 19%,#175c91 66%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #050b1c 0%,#184882 19%,#175c91 66%); /* IE10+ */
-    background: linear-gradient(to bottom,  #050b1c 0%,#184882 19%,#175c91 66%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050b1c', endColorstr='#175c91',GradientType=0 ); /* IE6-9 */
+    background: #050b1c;
 }
 .column a {
-    color: #005;
+    color: #66f;
     font-weight: bold;
     text-decoration: none;
 }
@@ -109,7 +102,7 @@ header {
 }
 #topright {
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 2.2%;
     padding: 15px;
 }
