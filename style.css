@@ -90,6 +90,9 @@ header {
     text-decoration: none;
     color: #ccc;
 }
+.buttonset.b2 > a {
+    width: 50%;
+}
 .buttonset > a:hover {
     border: 2px solid #555;
     text-decoration: underline;
