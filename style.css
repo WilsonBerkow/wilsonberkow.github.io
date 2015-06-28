@@ -131,7 +131,7 @@ header {
     padding: 15px;
 }
 #topright a {
-    color: lightgray;
+    color: #ccc;
     margin-left: 8px;
 }
 #topright a:hover {
