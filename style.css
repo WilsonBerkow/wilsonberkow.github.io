@@ -61,6 +61,22 @@ header {
     text-align: center;
     margin-bottom: 5px;
 }
+.column#skills .skill-item {
+    display: block;
+    width: 70%;
+    margin-left: 10%;
+    padding: 3px;
+}
+.column#skills .skill-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+}
+.column#skills  .skill-name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #projects > .item > .name {
     font-weight: bold;
     font-size: 1.3em;
