@@ -2,6 +2,7 @@
     font-family: Existence;
     src: url(Existence-Light.otf);
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -9,25 +10,29 @@ html, body {
     padding: 0;
     overflow-x: hidden;
 }
+
 body {
     position: absolute;
     top: 0;
     left: 0;
     color: #ccc;
-    background: #050b1c;
+    background: #0b1222;
     font-family: Existence, corbel, arial;
 }
+
 .column a {
-    color: #66f;
-    font-weight: bold;
+    color: #88c;
     text-decoration: none;
 }
+
 .column a:hover {
     text-decoration: underline;
 }
+
 .column a:active {
     color: orange;
 }
+
 header {
     font-size: 65px;
     padding-left: 10px;
@@ -38,22 +43,27 @@ header {
     font-variant: small-caps;
     text-align: center;
 }
+
 #subtitle {
     font-size: 17px;
     text-align: center;
     font-variant: small-caps;
 }
+
 .column {
     display: inline-block;
     vertical-align: top;
 }
+
 .column#skills, .column#about {
     width: 25%;
     margin: 0 2.2% 2.2% 2.2%;
 }
+
 .column#projects {
     width: 40%;
 }
+
 .column > .heading {
     font-size: 40px;
     width: 100%;
@@ -61,17 +71,20 @@ header {
     text-align: center;
     margin-bottom: 5px;
 }
+
 .column#skills .skill-item {
     display: block;
     width: 70%;
     margin-left: 10%;
     padding: 3px;
 }
+
 .column#skills .skill-icon {
     display: inline-block;
     vertical-align: middle;
     width: 50px;
 }
+
 .column#skills  .skill-name {
     display: inline-block;
     vertical-align: middle;
@@ -83,12 +96,15 @@ header {
     display: inline-block;
     padding-left: 2px;
 }
+
 #projects > .item > .name:after {
     content: ":";
 }
+
 #projects > .item {
     margin-bottom: 15px;
 }
+
 .buttonset {
     width: 100%;
     display: flex;
@@ -98,6 +114,7 @@ header {
     -ms-user-select: none;
     user-select: none;
 }
+
 .buttonset > a {
     display: block;
     flex-grow: 1;
@@ -111,32 +128,39 @@ header {
     text-decoration: none;
     color: #ccc;
 }
+
 .buttonset.b2 > a {
     width: 50%;
 }
+
 .buttonset > a:hover {
     border: 2px solid #555;
     text-decoration: underline;
     color: #ccc;
 }
+
 .buttonset > a:active {
     border: 2px solid #555;
     background-color: dimgray;
     color: #ccc;
 }
+
 #topright {
     position: absolute;
     top: 8px;
     right: 2.2%;
     padding: 15px;
 }
+
 #topright a {
     color: #ccc;
     margin-left: 8px;
 }
+
 #topright a:hover {
     color: gray;
 }
+
 #topright a:active {
     color: dimgray;
 }
