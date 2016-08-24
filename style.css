@@ -84,7 +84,7 @@ header {
     width: 50px;
 }
 
-.column#skills  .skill-name {
+.column#skills .skill-name {
     display: inline-block;
     vertical-align: middle;
 }
@@ -92,16 +92,21 @@ header {
 #projects > .item > .name {
     font-weight: bold;
     font-size: 1.3em;
-    display: inline-block;
+    display: inline;
     padding-left: 2px;
-}
-
-#projects > .item > .name:after {
-    content: ":";
 }
 
 #projects > .item {
     margin-bottom: 15px;
+}
+
+.video-container {
+    display: none;
+    text-align: center;
+}
+video {
+    display: inline-block;
+    max-width: 100%;
 }
 
 .buttonset {
