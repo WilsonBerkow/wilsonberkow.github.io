@@ -1,5 +1,5 @@
 (function () {
-    // Set the "WATCH DESTINY" button to toggle display of the
+    // Set the "WATCH DESTINY SCORE" button to toggle display of the
     // video of DEStiny in autonomous.
     var openButton = document.getElementById("cv-video-opener");
     var videoContainer = document.getElementById("cv-video-container");
