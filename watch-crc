@@ -1,1 +1,249 @@
-index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wilson Berkow</title>
+        <link href="style.css" rel="stylesheet" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="favicon.png" rel="shortcut icon" />
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>Wilson Berkow</header>
+
+        <div id="topright">
+            <a href="http://github.com/WilsonBerkow" title="My GitHub Profile" target="_blank"><i class="fa fa-github-square fa-3x"></i></a>
+            <a href="mailto:wilsonberkow@gmail.com" title="Email Me (wilsonberkow@gmail.com)"><i class="fa fa-envelope-square fa-3x"></i></a>
+        </div>
+
+        <hr style="width: 200px;" />
+
+        <div id="subtitle">
+            Student Developer
+        </div>
+
+        <div id="skills" class="column">
+            <div class="heading">Skills</div>
+
+            <hr style="width: 80%;" />
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img class="skill-icon" src="icons/rust.svg" width="50" height="50"/>
+                </div>
+                <div class="skill-name">Rust</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img class="skill-icon" src="icons/js.png" width="50" />
+                </div>
+                <div class="skill-name">JavaScript</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img src="icons/coffee.png" width="50" />
+                </div>
+                <div class="skill-name">Java 7 &amp; 8</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img class="skill-icon" src="icons/eye.png" width="50" height="50" />
+                </div>
+                <div class="skill-name">
+                    <abbr title="Open Source Computer Vision">OpenCV</abbr>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon" style="text-align: right;">
+                    <img class="skill-icon" src="icons/elm.png" width="48" height="48" style="width: 48px;" />
+                </div>
+                <div class="skill-name">Elm</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon" style="text-align: right;">
+                    <img class="skill-icon" src="icons/clojure.png" width="50" height="50" style="width: 48px;" />
+                </div>
+                <div class="skill-name">Clojure</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img src="icons/html5-css3.png" width="50" />
+                </div>
+                <div class="skill-name">HTML5, CSS</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <img class="skill-icon" src="icons/haskell.png" width="50" />
+                </div>
+                <div class="skill-name">Haskell</div>
+            </div>
+        </div>
+
+        <div id="projects" class="column">
+            <div class="heading">Projects &amp; Experience</div>
+
+            <hr style="width: 80%;" />
+
+            <div class="item">
+                <div class="name">Head of Computer Vision</div>
+                for <a href="https://stuypulse.com">Team 694</a>'s 2016 robot
+                <i>DEStiny</i>. 2016 was the first
+                year in our 16 years that our team wrote our own working
+                computer vision&mdash;code which uses images from a camera to
+                drive the robot automatically to where it needs to be. Check out
+                a video of DEStiny crossing an obstacle and
+                shooting a goal in at the <em>China Robotics Challenge</em> in
+                Shanghai, China&mdash;all without being controlled by a human:
+                <div class="buttonset b2">
+                    <!-- If JS is disabled, the #cv-video-opener link will bring
+                        the user to the video after a page reload.  Otherwise, the
+                        navigation will be stopped and #video-container will open.
+                    -->
+                    <a id="cv-video-opener" href="res/CRC-autonomous-goal.mp4">WATCH DESTINY SCORE</a>
+                    <a href="https://github.com/Team694/DEStiny/tree/master/src/edu/stuy/robot/cv">GITHUB</a>
+                </div>
+                <div class="video-container" id="cv-video-container">
+                    <video controls muted preload="metadata" src="res/CRC-autonomous-goal.mp4" />
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="name">Team 694 Software Engineering Education (2015-16):</div>
+                in preparing for the 2016
+                <a href="http://www.firstinspires.org/" style="font-style: italic;">FIRST</a>
+                robotics season, I worked with freshmen and sophomores new to
+                the team, teaching Java and the APIs that are used to interact
+                with the robot, and I continued to work with them during the
+                rest of the year.
+                <div class="buttonset b2">
+                    <a href="http://stuypulse.com/">STUYPULSE ROBOTICS</a>
+                    <a href="https://github.com/Team694/PEGasus1">GITHUB</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="name">Kinemagics:</div>
+                a 1D-kinematics simulator written in ClojureScript. The user can select
+                a preset motion curve or draw their own, and then
+                observe how the position, velocity and acceleration of an object
+                with that motion changes over time.
+                <div class="buttonset b2">
+                    <a href="kinemagics/">TRY</a>
+                    <a href="http://github.com/WilsonBerkow/kinemagics">GITHUB</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="name">World Science Festival (WSF) Volunteer:</div>
+                In the Springs of 2015 and 2016, I volunteered at
+                <a href="//www.worldsciencefestival.com">WSF</a>.
+                I helped with several standard events and in 2015 participated
+                in their Ambassador Program, in which I worked with speakers
+                as they taught students elsewhere in the city. WSF is an
+                organization that brings experts in STEM fields to the people,
+                to nurture and grow popular curiosity in science.
+                <div class="buttonset">
+                    <a href="http://www.worldsciencefestival.com/">WORLD SCIENCE FESTIVAL</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="name">Firecyclist:</div>
+                a mobile game written with web technologies, in which
+                the player falls through the sky, manuevering around
+                fireballs by drawing platforms under a unicyclist's
+                feet.
+                <div class="buttonset b2">
+                    <a href="FirecyclistJS/">PLAY</a>
+                    <a href="http://github.com/WilsonBerkow/FirecyclistJS">GITHUB</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="name">Margarita:</div>
+                a mobile game written with web technologies, based on
+                Mikhail Bulgakov's <i>The Master and Margarita</i>, in
+                which the player is faced with a series of randomly-selected
+                minigames based on the book.
+                <div class="buttonset b2">
+                    <a href="The-Master-and-Margarita/">PLAY</a>
+                    <a href="http://github.com/WilsonBerkow/The-Master-and-Margarita">GITHUB</a>
+                </div>
+            </div>
+
+            <!-- TODO: Remove this (or look back at it, see if it's promising,
+                and make a 'Try' page, and add PoSE to the top -->
+            <div class="item">
+                <div class="name">makeParser.coffee:</div>
+                a recursive descent parsing library written in CoffeeScript.
+                <div class="buttonset">
+                    <!--
+                        TODO: Set up a 'Try' page with makeParser's playground?
+                        It'd probably be worth it after a design improvement.
+                    -->
+                    <a href="https://github.com/WilsonBerkow/makeParser-coffee">GITHUB</a>
+                </div>
+            </div>
+
+            <!-- The webapp doesn't actually work, as lisa.stuy.edu just
+                 sends the Python sources as plaintext. Consider regularly
+                 keeping the Koding VM on, and link to that? Cheshire
+                 Chess was actually pretty decent.
+                 <div class="item">
+                     <div class="name">Cheshire Chess:</div>
+                     a Python web application written as a pair project
+                     for a basic CS class, Cheshire Chess is an digital
+                     chessboard which walks the user through the legal
+                     moves of chess and allows full games to be played.
+                     <div class="buttonset">
+                         <a href="http://lisa.stuy.edu/~wilson.berkow/proj/">PLAY</a>
+                     </div>
+                 </div>
+                 -->
+        </div>
+
+        <div id="about" class="column">
+            <div class="heading">About</div>
+
+            <hr style="width: 80%;" />
+
+            <p>
+                I am a senior at Stuyvesant High School in New York City,
+                and have been writing software for years. I am
+                the President of Software Engineering on the
+                <a href="//stuypulse.com">Team 694 Robotics Team</a>.
+                (Our code is all open-source and available
+                <a href="//github.com/Team694">on GitHub</a>.)
+            </p>
+
+            <p>
+                In 2016, Team 694 reached
+                the world championship of <i>FIRST</i> Robotics and then
+                went on to <i>Einstein</i>, the final competition between
+                the victors of each of the eight divisions at the championship.
+                This makes us the only active team in NYC to have gotten to
+                Einstein. In the NYC Regional competition (a qualifier for
+                the world championship), we won the <i>Engineering Inspiration</i>
+                Award for, in part, the help we have offered to other teams, including
+                in the <i>China Robotics Challenge</i>, and in the NYC Regional
+                itself. We had a "Fix It crew" dedicated to aiding other
+                teams, and although I was generally busy with my work for our
+                own robot, I had a couple opportunities to help a couple other
+                teams.
+            </p>
+
+            <p>
+                I have a passion for software development (and
+                programming language design) which I have persued
+                through personal projects.
+            </p>
+        </div>
+    </body>
+</html>
